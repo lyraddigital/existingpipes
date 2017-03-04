@@ -1,0 +1,86 @@
+<h1>Date Formats</h1>
+
+<h2>Country Specific</h2>
+
+<p>
+  Default Date Format: {{standardDate | date}} <br />
+  Using "medium": {{standardDate | date:"medium"}} <br />
+  Using "short": {{standardDate | date:"short"}} <br />
+  Using "fullDate": {{standardDate | date:"fullDate"}} <br />
+  Using "longDate": {{standardDate | date:"longDate"}} <br />
+  Using "mediumDate": {{standardDate | date:"mediumDate"}} <br />
+  Using "shortDate": {{standardDate | date:"shortDate"}} <br />
+  Using "mediumTime": {{standardDate | date:"mediumTime"}} <br />
+  Using "shortTime": {{standardDate | date:"shortTime"}} <br />
+</p>
+
+<h2>Manually set</h2>
+
+<p>
+    Specified Date Format: {{standardDate | date:"yyyy-MM-dd"}} <br />
+    Returned from Component: {{standardDate | date:formattedDate}} <br />
+</p>
+
+<h1>Uppercase Pipe</h1>
+
+<p>
+  This is an {{upperCaseMessage | uppercase }} sentence.
+</p>
+
+<h1>Lowercase Pipe</h1>
+
+<p>
+  This is a {{lowerCaseMessage | lowercase }} sentence.
+</p>
+
+<h1>Decimal Pipe</h1>
+
+<p>
+  This is a number that has the default values of 1 decimal to the left set,
+  and a minimum of 0 digits to the right to a maximum of 3 digits to the right. 
+  {{ PI | number }}
+</p>
+
+<p>
+  This is a number that allows for a minimum of one decimal place
+  to the left, and 5 decimal places to the right. {{ PI | number:'1.5-5' }}
+</p>
+
+<p>
+  This is a number that allows for a minimum of two decimal places
+  to the left, and 5 decimal places to the right. {{ PI | number:'2.5-5' }}
+</p>
+
+<h1>Currency Pipe</h1>
+
+<p> 
+  I am currently spending {{ money | currency }} <br />
+  But I should be spending {{ money | currency:'AUD'}} <br />
+  But I would like to write it personally like {{ money | currency:'USD':true }} <br />
+  But I also like to work in whole dollars so {{ money | currency:'USD':true:'1.0-0'}} it is.
+</p>
+
+<h1>Percent Pipe</h1>
+
+<p> 
+  My current tax rate is: {{ tax | percent }} <br />
+  My formatted tax rate is: {{ tax | percent:'2.2-2' }}
+</p>
+
+<h1>Json Pipe</h1>
+
+<p>
+  Here is your details in JSON format {{ details | json }}
+</p>
+
+<h1>Slice Pipe</h1>
+
+<p>
+  Slice 5 letters off: {{ name | slice:5 }} <br />
+  Slices out all letters: {{ name | slice:20 }} <br />
+  Slices out all but the last 10 letters on the end: {{ name | slice:-10 }} <br />
+  Slices out everything after 10 letters in: {{ name | slice:0:9 }} <br />
+  Slices out the last 5 letters: {{ name | slice:0:-5 }} <br />
+  Slices out no letters: {{ name | slice:0:-20 }} <br />
+  Slice first and last 2 letters off: {{ name | slice:1:14 }} <br />
+</p>
